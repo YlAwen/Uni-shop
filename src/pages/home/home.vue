@@ -101,7 +101,7 @@ export default {
     // 获取楼层数据
     async getFloorList() {
       const res = await uni.$http.get("/api/public/v1/home/floordata");
-      console.log(res);
+      // console.log(res);
       if (res.data.meta.status !== 200) return uni.$showMsg();
       // 对数据进行处理
       res.data.message.forEach((floor) => {
