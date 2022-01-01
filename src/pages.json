@@ -3,27 +3,19 @@
     //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
     {
       "path": "pages/home/home",
-      "style": {
-        "navigationBarTitleText": "购物商城"
-      }
+      "style": {}
     },
     {
       "path": "pages/cate/cate",
-      "style": {
-        "navigationBarTitleText": "cate"
-      }
+      "style": {}
     },
     {
       "path": "pages/cart/cart",
-      "style": {
-        "navigationBarTitleText": "cart"
-      }
+      "style": {}
     },
     {
       "path": "pages/my/my",
-      "style": {
-        "navigationBarTitleText": "my"
-      }
+      "style": {}
     }
   ],
   "tabBar": {
@@ -58,7 +50,12 @@
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "购物商城",
     "navigationBarBackgroundColor": "#c00000",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "#ffffff",
+    "usingComponents": {
+      "van-icon": "/wxcomponents/vant/dist/icon/index",
+      "van-search": "/wxcomponents/vant/dist/search/index",
+      "van-tag": "/wxcomponents/vant/dist/tag/index"
+    }
   },
   "subPackages": [
     {
@@ -66,15 +63,15 @@
       "pages": [
         {
           "path": "goods_detail/goods_detail",
-          "style": {
-            "navigationBarTitleText": "goods_detail"
-          }
+          "style": {}
         },
         {
           "path": "goods_list/goods_list",
-          "style": {
-            "navigationBarTitleText": "goods_list"
-          }
+          "style": {}
+        },
+        {
+          "path": "search/search",
+          "style": {}
         }
       ]
     }

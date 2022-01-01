@@ -1,5 +1,9 @@
 <template>
   <view>
+    <!-- 自定义搜索组件 -->
+    <my-search @click="gotoSearch"></my-search>
+    <!-- 自定义搜索组件 -->
+
     <!-- 滑动区 -->
     <view class="scroll-view-container">
       <!-- 左 -->
@@ -73,14 +77,19 @@ export default {
         url: "/subpkg/goods_list/goods_list?cid=" + item.cat_id,
       });
     },
+    gotoSearch() {
+      uni.navigateTo({
+        url: "/subpkg/search/search",
+      });
+    },
   },
   watch: {},
 
   // 页面周期函数--监听页面加载
   onLoad() {
     const res = uni.getSystemInfoSync();
-    console.log(res.windowHeight);
-    this.wh = res.windowHeight;
+    // console.log(res.windowHeight);
+    this.wh = res.windowHeight - 50;
     this.getCateList();
   },
   // 页面周期函数--监听页面初次渲染完成

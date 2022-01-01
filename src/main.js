@@ -1,6 +1,7 @@
 import Vue from "vue";
 import App from "./App";
 import { $http } from "@escook/request-miniprogram";
+
 uni.$http = $http;
 // 请求拦截器
 $http.beforeRequest = function (options) {

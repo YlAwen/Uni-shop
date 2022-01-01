@@ -1,5 +1,11 @@
 <template>
   <view>
+    <!-- 自定义搜索组件 -->
+    <view class="search-box">
+      <my-search @click="gotoSearch"></my-search>
+    </view>
+    <!-- 自定义搜索组件 -->
+
     <!-- 轮播图 -->
     <swiper
       class="swiper"
@@ -120,6 +126,11 @@ export default {
         });
       }
     },
+    gotoSearch() {
+      uni.navigateTo({
+        url: "/subpkg/search/search",
+      });
+    },
   },
   watch: {},
 
@@ -181,5 +192,10 @@ swiper {
     flex-wrap: wrap;
     justify-content: space-around;
   }
+}
+.search-box {
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 </style>
