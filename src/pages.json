@@ -1,6 +1,5 @@
 {
   "pages": [
-    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
     {
       "path": "pages/home/home",
       "style": {}
@@ -67,7 +66,11 @@
         },
         {
           "path": "goods_list/goods_list",
-          "style": {}
+          "style": {
+            "onReachBottomDistance": 150,
+            "backgroundColor":"#f8f8f8",
+            "enablePullDownRefresh":true
+          }
         },
         {
           "path": "search/search",

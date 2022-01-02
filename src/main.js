@@ -15,11 +15,15 @@ $http.afterRequest = function (options) {
 };
 $http.baseUrl = "https://www.uinav.com";
 
-uni.$showMsg = function (title = "数据请求失败！", duration = 1500) {
+uni.$showMsg = function (
+  title = "数据请求失败！",
+  duration = 1500,
+  icon = "none"
+) {
   uni.showToast({
     title,
     duration,
-    icon: "none",
+    icon,
   });
 };
 Vue.config.productionTip = false;
