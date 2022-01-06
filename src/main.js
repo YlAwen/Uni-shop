@@ -11,7 +11,7 @@ $http.beforeRequest = function (options) {
   // console.log(options);
   if (options.url.indexOf("/my/") !== -1) {
     options.header = {
-      Authorization: JSON.parse(store.state.m_user.token),
+      Authorization: store.state.m_user.token,
     };
   }
 };
