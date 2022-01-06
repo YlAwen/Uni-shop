@@ -48,8 +48,11 @@
 </template>
 
 <script>
+import badgeMin from "@/mixins/tabbar-badge.js";
 export default {
   components: {},
+  mixins: [badgeMin],
+
   data: () => ({
     // 当前设备可用高度
     wh: 0,

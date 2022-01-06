@@ -1,7 +1,7 @@
 import Vue from "vue";
 import App from "./App";
 import { $http } from "@escook/request-miniprogram";
-
+import store from "./store";
 uni.$http = $http;
 // 请求拦截器
 $http.beforeRequest = function (options) {
@@ -32,5 +32,6 @@ App.mpType = "app";
 
 const app = new Vue({
   ...App,
+  store,
 });
 app.$mount();

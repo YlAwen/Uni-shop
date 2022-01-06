@@ -57,7 +57,9 @@
       "van-overlay": "/wxcomponents/vant/dist/overlay/index",
       "van-goods-action": "/wxcomponents/vant/dist/goods-action/index",
       "van-goods-action-icon": "/wxcomponents/vant/dist/goods-action-icon/index",
-      "van-goods-action-button": "/wxcomponents/vant/dist/goods-action-button/index"
+      "van-goods-action-button": "/wxcomponents/vant/dist/goods-action-button/index",
+      "van-stepper": "/wxcomponents/vant/dist/stepper/index",
+      "van-swipe-cell": "/wxcomponents/vant/dist/swipe-cell/index"
     }
   },
   "subPackages": [

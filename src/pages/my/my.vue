@@ -3,8 +3,12 @@
 </template>
 
 <script>
+import badgeMin from "@/mixins/tabbar-badge.js";
+
 export default {
   components: {},
+  mixins: [badgeMin],
+
   data: () => ({}),
   computed: {},
   methods: {},

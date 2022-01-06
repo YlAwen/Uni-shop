@@ -44,9 +44,13 @@
           icon="cart-o"
           text="购物车"
           @click="gotoCart"
-          info="5"
+          :info="cartNum"
         />
-        <van-goods-action-button text="加入购物车" type="warning" />
+        <van-goods-action-button
+          text="加入购物车"
+          type="warning"
+          @click="btnClick"
+        />
         <van-goods-action-button text="立即购买" />
       </van-goods-action>
     </view>
@@ -55,6 +59,7 @@
 </template>
 
 <script>
+import { mapState, mapMutations } from "vuex";
 export default {
   components: {},
   data: () => ({
@@ -62,8 +67,14 @@ export default {
     show: false,
     // picIndex: 0,
   }),
-  computed: {},
+  computed: {
+    ...mapState("m_cart", ["cart"]),
+    cartNum: function () {
+      return this.cart.length ? this.cart.length : "";
+    },
+  },
   methods: {
+    ...mapMutations("m_cart", ["addToCart"]),
     // 获取数据
     async getGoodsDetail(goods_id) {
       const res = await uni.$http.get("/api/public/v1/goods/detail", {
@@ -84,11 +95,22 @@ export default {
         loop: true,
       });
     },
-
+    // 导航到购物车
     gotoCart() {
       uni.switchTab({
         url: "/pages/cart/cart",
       });
+    },
+    btnClick() {
+      const goods = {
+        goods_id: this.goods_info.goods_id,
+        goods_name: this.goods_info.goods_name,
+        goods_price: this.goods_info.goods_price,
+        goods_count: 1,
+        goods_small_logo: this.goods_info.goods_small_logo,
+        goods_state: true,
+      };
+      this.addToCart(goods);
     },
     goto() {
       console.log(2);
