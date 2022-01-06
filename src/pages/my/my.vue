@@ -1,16 +1,22 @@
 <template>
-  <div class="my">my</div>
+  <view class="my">
+    <my-login v-if="!token"></my-login>
+    <my-userinfo v-else></my-userinfo>
+  </view>
 </template>
 
 <script>
 import badgeMin from "@/mixins/tabbar-badge.js";
+import { mapMutations, mapState } from "vuex";
 
 export default {
   components: {},
   mixins: [badgeMin],
 
   data: () => ({}),
-  computed: {},
+  computed: {
+    ...mapState("m_user", ["token"]),
+  },
   methods: {},
   watch: {},
 
@@ -37,4 +43,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="less">
+page,
+.my {
+  height: 100%;
+}
+</style>
