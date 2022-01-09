@@ -1,0 +1,66 @@
+.pannel-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  padding: 0 10px;
+  height: 45px;
+}
+.pannel-list {
+  padding: 0 10px;
+  position: relative;
+  top: -10px;
+}
+.pannel-list .pannel {
+  background-color: #fff;
+  border-radius: 3px;
+  margin-bottom: 8px;
+}
+.pannel-list .pannel .pannel-title {
+  line-height: 45px;
+  padding-left: 10px;
+  font-size: 15px;
+  border-bottom: 1px solid #f4f4f4;
+}
+.pannel-list .pannel .pannel-body {
+  display: flex;
+  justify-content: space-around;
+}
+.pannel-list .pannel .pannel-body .pannel-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  padding: 10px 0;
+}
+.pannel-list .pannel .pannel-body .pannel-item .icon {
+  width: 35px;
+  height: 35px;
+}
+.my-userinfo {
+  height: 100%;
+  background-color: #f4f4f4;
+}
+.my-userinfo .top-box {
+  height: 400rpx;
+  background-color: #c00000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.my-userinfo .top-box .avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 45px;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 5px black;
+}
+.my-userinfo .top-box .nickname {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 700;
+  margin-top: 10px;
+}
+

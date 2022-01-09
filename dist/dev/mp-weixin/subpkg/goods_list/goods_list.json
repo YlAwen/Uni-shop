@@ -1,0 +1,8 @@
+{
+  "onReachBottomDistance": 150,
+  "backgroundColor": "#f8f8f8",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "my-goods": "/components/my-goods/my-goods"
+  }
+}
