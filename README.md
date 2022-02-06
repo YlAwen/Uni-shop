@@ -1,19 +1,12 @@
-# uni_app
+## 购物商城
 
-## Project setup
-```
-npm install
-```
+> 说明：微信小程序购物商城
+> <br>
+> 日期：2022/01/06
+> <br>
+> 地址：https://github.com/YlAwen/uni-shop
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- 技术栈
+  - uni-app
+  - Vant Weapp
+  - Less
